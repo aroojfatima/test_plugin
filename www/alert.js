@@ -1,11 +1,8 @@
-cordova.exec(successCallback, failureCallback, service, action, [args]);
+var alertTest = function() {};
 
-module.exports = {
-    alert: function(title, message, buttonLabel, successCallback) {
-        cordova.exec(successCallback,
-            null, // No failure callback
-            "Alert",
-            "alert",
-            [title, message, buttonLabel]);
-    }
+alertTest.prototype.alertIt = function(success, fail) {
+    cordova.exec(success, fail, "Alert","alert", ["Test Title", "Hello", "Button Label"]);
 };
+
+var alertVar = new alertTest();
+module.exports = alertVar;

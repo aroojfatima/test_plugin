@@ -1,4 +1,4 @@
-package com.acme.plugin.alert;
+package test_plugin;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;

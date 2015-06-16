@@ -10,7 +10,7 @@
     <engines>
         <engine name="cordova" version=">=3.5.0" />
     </engines>
-    <js-module src="www/broprint.js" name="broprint">
+    <js-module src="www/print.js" name="broprint">
         <clobbers target="PrintPlugin" />
     </js-module>
 

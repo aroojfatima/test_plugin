@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.test_plugin"
-        version="0.0.1">
+  id="test.plugin.helloworld"
+  version="0.0.1">
 
-    <name>Alert</name>
-    <description>A Cordova plugin that displays an alert popup dialog</description>
-
+    <name>HelloWorldPlugin</name>
+    <description>HelloWorldPlugin Description</description>
+    <author>Asial Corporation</author>
+    <license>Apache 2.0 License</license>
     <engines>
-        <engine name="cordova" version=">=3.6.0" />
+        <engine name="cordova" version=">=3.5.0" />
     </engines>
-
-    <js-module src="www/alert.js" name="Alert">
-        <clobbers target="Alert" />
+    <js-module src="www/hello_world.js" name="helloworld">
+        <clobbers target="HelloWorld" />
     </js-module>
 
-    <!-- android -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="HelloWorldPlugin">
+                <param name="ios-package" value="HelloWorldPlugin"/>
+            </feature>
+    </config-file>
+
+    </platform>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Alert">
-                <param name="android-package" value="com.test_plugin.Alert" />
+            <feature name="HelloWorldPlugin"> 
+                <param name="android-package" value="test.plugin.HelloWorldPlugin"/>
             </feature>
         </config-file>
-        <source-file src="src/com/test_plugin/Alert.java" target-dir="src/com/test_plugin" />
+        <source-file src="src/android/test/plugin/HelloWorldPlugin.java" target-dir="src/test/plugin" />
     </platform>
 
 </plugin>

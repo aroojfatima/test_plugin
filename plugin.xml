@@ -1,34 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-  id="test.plugin.helloworld"
+  id="test.plugin.print"
   version="0.0.1">
 
-    <name>HelloWorldPlugin</name>
-    <description>HelloWorldPlugin Description</description>
-    <author>Asial Corporation</author>
+    <name>PrintPlugin</name>
+    <description>PrintPlugin for Brother Mobile SDK</description>
+    <author>Arooj Fatima</author>
     <license>Apache 2.0 License</license>
     <engines>
         <engine name="cordova" version=">=3.5.0" />
     </engines>
-    <js-module src="www/hello_world.js" name="helloworld">
-        <clobbers target="HelloWorld" />
+    <js-module src="www/broprint.js" name="broprint">
+        <clobbers target="PrintPlugin" />
     </js-module>
 
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="HelloWorldPlugin">
-                <param name="ios-package" value="HelloWorldPlugin"/>
-            </feature>
-    </config-file>
-
-    </platform>
-    <platform name="android">
+     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="HelloWorldPlugin"> 
-                <param name="android-package" value="test.plugin.HelloWorldPlugin"/>
+            <feature name="Print">
+                <param name="android-package" value="test.plugin.Print"/>
             </feature>
         </config-file>
-        <source-file src="src/android/test/plugin/HelloWorldPlugin.java" target-dir="src/test/plugin" />
+        <source-file src="src/android/test/plugin/Print.java" target-dir="src/test/plugin" />
     </platform>
 
 </plugin>

@@ -8,10 +8,10 @@ import org.json.JSONException;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class HelloWorldPlugin extends CordovaPlugin {
+public class Print extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        callbackContext.success("Hello World!");
+        callbackContext.success("Hello World!" + args[0]);
         return true;
     }    
 }

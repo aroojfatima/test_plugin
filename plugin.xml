@@ -20,7 +20,22 @@
                 <param name="android-package" value="test.plugin.Print"/>
             </feature>
         </config-file>
-        <source-file src="src/android/test/plugin/Print.java" target-dir="src/test/plugin" />
-    </platform>
+
+         <source-file src="src/android/com/print/Base.java" target-dir="src/android/com/print" />
+         <source-file src="src/android/com/print/Common.java" target-dir="src/android/com/print" />
+         <source-file src="src/android/com/print/ImagePrint.java" target-dir="src/android/com/print" />
+         <source-file src="src/android/com/print/MsgDialog.java" target-dir="src/android/com/print" />
+         <source-file src="src/android/com/print/MsgHandle.java" target-dir="src/android/com/print" />
+         <source-file src="src/android/test/plugin/Print.java" target-dir="src/android/test/plugin" />
+         <source-file src="src/android/com/print/PrinterModelInfo.java" target-dir="src/android/com/print" />
+         <source-file src="src/android/com/print/PrinterPreference.java" target-dir="src/android/com/print" />
+         <source-file src="src/android/com/print/PrintFunctions.java" target-dir="src/android/com/print" />
+
+         <source-file src="src/libs/BrotherPrintLibrary.jar" target-dir="libs" framework="true" />
+         <source-file src="src/libs/MobilePrintLib.jar" target-dir="libs" framework="true" />
+
+         <source-file src="src/res/values/strings.xml" target-dir="src/res/values"/>
+
+     </platform>
 
 </plugin>

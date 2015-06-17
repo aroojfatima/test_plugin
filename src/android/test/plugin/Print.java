@@ -11,7 +11,7 @@ import org.json.JSONException;
 public class Print extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        callbackContext.success("Hello World!" + args[0]);
+        callbackContext.success("Hello World!" + action);
         return true;
     }    
 }
